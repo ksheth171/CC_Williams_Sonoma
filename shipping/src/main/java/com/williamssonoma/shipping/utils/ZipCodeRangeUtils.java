@@ -1,13 +1,16 @@
 package com.williamssonoma.shipping.utils;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import com.williamssonoma.shipping.model.ZipCodeRange;
 
 public class ZipCodeRangeUtils {
 
 	public static ArrayList<ZipCodeRange> consolidateOverlappingZipCodes(ArrayList<ZipCodeRange> zipCodeRanges) {
-
+		//sort the list based on start range
+		Collections.sort(zipCodeRanges, new ZipCodeRange());
+		
 		Integer startRange;
 		Integer endRange;
 		ArrayList<ZipCodeRange> consolidatedZipCodeRanges = new ArrayList<ZipCodeRange>();

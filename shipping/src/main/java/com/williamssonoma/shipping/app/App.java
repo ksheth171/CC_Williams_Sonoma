@@ -34,9 +34,6 @@ public class App {
 			prepareZipCodeList(inputRange);
 		}
 
-		//Sort the list
-		Collections.sort(zipCodeRanges, new ZipCodeRange());
-
 		// Consolidated zip code range list
 		ZipCodeRangeUtils.consolidateOverlappingZipCodes(zipCodeRanges);
 	
